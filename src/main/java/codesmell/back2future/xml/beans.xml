@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="dmc12" class="codesmell.back2future.bean.car.Delorean">
+    <property name="engine" ref="mrFusion" />
+  </bean>
+
+  <bean id="mrFusion" class="codesmell.back2future.bean.engine.MrFusionWithFluxCapacitor">
+    <constructor-arg ref="fusionFlux" />
+  </bean>
+
+  <bean id="prv" class="codesmell.back2future.bean.engine.PeugeotRenaultVolvo" />
+  <bean id="turbo" class="codesmell.back2future.bean.engine.LegendTwinTurbo" />
+  <bean id="fusionFlux" class="codesmell.back2future.bean.engine.FusionFluxCapacitor" />
+
+</beans>
