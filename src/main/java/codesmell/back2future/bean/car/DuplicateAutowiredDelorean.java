@@ -16,6 +16,7 @@ public class DuplicateAutowiredDelorean implements Car {
         engine = e;
     }
 
+    @Override
     public void go() {
         engine.accelerate();
     }
