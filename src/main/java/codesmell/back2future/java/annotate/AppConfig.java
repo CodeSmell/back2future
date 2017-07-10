@@ -11,8 +11,6 @@ public class AppConfig {
 
     @Bean(name="delorean")
     public Car buildDelorean() {
-        // will fail because there is no
-        // Engine with the name "twin"
         return new AutowiredDelorean();
     }
 
