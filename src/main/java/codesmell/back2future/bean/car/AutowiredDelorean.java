@@ -2,7 +2,6 @@ package codesmell.back2future.bean.car;
 
 import codesmell.back2future.bean.engine.Engine;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 
 import javax.annotation.PostConstruct;
 
@@ -13,8 +12,7 @@ import javax.annotation.PostConstruct;
 public class AutowiredDelorean implements Car {
 
     @Autowired
-    @Qualifier("twin")
-    // expects an Engine with the qualifier/name "twin"
+    // expects an Engine with @Primary or only one to be available
     private Engine engine;
 
     @Override
