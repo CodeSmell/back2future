@@ -1,4 +1,4 @@
-package codesmell.back2future.java;
+package codesmell.back2future.java.annotate;
 
 import codesmell.back2future.bean.car.AutowiredDelorean;
 import codesmell.back2future.bean.car.Car;
@@ -24,6 +24,7 @@ public class AppConfig {
     @Bean
     public FluxCapacitor buildFlux() {
         return new FluxCapacitor() {
+            @Override
             public void engage() {
                 System.out.println("McFly!");
             }

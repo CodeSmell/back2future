@@ -1,4 +1,4 @@
-package codesmell.back2future.java;
+package codesmell.back2future.java.scan;
 
 import codesmell.back2future.bean.car.AnnotatedDelorean;
 import codesmell.back2future.bean.car.Car;
@@ -20,7 +20,7 @@ public class ScanConfig {
         return new AnnotatedDelorean();
     }
 
-    @Bean(name="dmc12")
+    @Bean(name="anotherDelorean")
     public Car getAnotherDelorean(@Qualifier("prv") Engine e) {
         // will use PRV because we jammed it in
         Delorean d = new Delorean();

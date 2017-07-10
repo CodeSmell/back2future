@@ -1,4 +1,4 @@
-package codesmell.back2future.java.dupe;
+package codesmell.back2future.java.annotate.dupe;
 
 import codesmell.back2future.bean.car.Car;
 import codesmell.back2future.bean.car.DuplicateAutowiredDelorean;

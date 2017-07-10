@@ -7,6 +7,9 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
+/**
+ * DI without getters/setters methods or constructors
+ */
 @Component(value="dmc12")
 public class AnnotatedDelorean implements Car {
 
@@ -22,8 +25,6 @@ public class AnnotatedDelorean implements Car {
 
     @PostConstruct
     public void postConstruct() throws Exception {
-        System.out.println("postConstruct: you are ready to go with Engine: " + engine.getClass().getSimpleName());
+        System.out.println("postConstruct: AnnotatedDelorean ready to go with Engine: " + engine.getClass().getSimpleName());
     }
-
-    // look at me: DI without getters/setters methods or constructors
 }

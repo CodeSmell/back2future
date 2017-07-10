@@ -4,8 +4,11 @@ import codesmell.back2future.bean.engine.Engine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
+import javax.annotation.PostConstruct;
+
 /**
  * minimal annotations
+ * DI without getters/setters methods or constructors
  */
 public class AutowiredDelorean implements Car {
 
@@ -19,5 +22,9 @@ public class AutowiredDelorean implements Car {
         engine.accelerate();
     }
 
-    // look at me: DI without getters/setters methods or constructors
+    @PostConstruct
+    public void postConstruct() throws Exception {
+        System.out.println("postConstruct: AutowiredDelorean ready to go with Engine: " + engine.getClass().getSimpleName());
+    }
+
 }
