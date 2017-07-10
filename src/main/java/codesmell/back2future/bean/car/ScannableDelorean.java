@@ -11,7 +11,7 @@ import javax.annotation.PostConstruct;
  * DI without getters/setters methods or constructors
  */
 @Component(value="dmc12")
-public class AnnotatedDelorean implements Car {
+public class ScannableDelorean implements Car {
 
     @Autowired
     @Qualifier("twin")
@@ -25,6 +25,6 @@ public class AnnotatedDelorean implements Car {
 
     @PostConstruct
     public void postConstruct() throws Exception {
-        System.out.println("postConstruct: AnnotatedDelorean ready to go with Engine: " + engine.getClass().getSimpleName());
+        System.out.println("postConstruct: ScannableDelorean ready to go with Engine: " + engine.getClass().getSimpleName());
     }
 }

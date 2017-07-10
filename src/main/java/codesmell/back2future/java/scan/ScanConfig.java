@@ -1,6 +1,6 @@
 package codesmell.back2future.java.scan;
 
-import codesmell.back2future.bean.car.AnnotatedDelorean;
+import codesmell.back2future.bean.car.ScannableDelorean;
 import codesmell.back2future.bean.car.Car;
 import codesmell.back2future.bean.car.Delorean;
 import codesmell.back2future.bean.engine.Engine;
@@ -17,7 +17,7 @@ public class ScanConfig {
         // will use LegendTwinTurbo engine
         // because that is what the scan will find
         // with the name "twin"
-        return new AnnotatedDelorean();
+        return new ScannableDelorean();
     }
 
     @Bean(name="anotherDelorean")

@@ -16,7 +16,12 @@ public class JavaConfigScanAppContextMain {
         appContext.refresh();
 
         // ask container for the Bean that is ready to use
-        Car car = appContext.getBean("delorean", Car.class);
+        // options
+        // -------------------------
+        // dmc12 = found via scan
+        // delorean = configured
+        // anotherDelorean = configured
+        Car car = appContext.getBean("dmc12", Car.class);
         car.go();
 
         System.out.println(car.getClass().getName());
