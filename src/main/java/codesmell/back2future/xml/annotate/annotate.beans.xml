@@ -9,7 +9,7 @@
   <context:annotation-config />
   
   <!-- XML to specify the beans but not the dependencies -->
-  <bean id="dmc12" class="codesmell.back2future.bean.car.AutowiredDelorean" />
+  <bean id="dmc12autowire" class="codesmell.back2future.bean.car.AutowiredDelorean" />
   <bean id="engine" class="codesmell.back2future.bean.engine.PeugeotRenaultVolvo" />
   <bean id="twin" class="codesmell.back2future.bean.engine.LegendTwinTurbo" />
 </beans>

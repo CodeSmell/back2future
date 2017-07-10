@@ -6,15 +6,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class XmlAnnotateAppContextMain {
 
     private static final String ANNOTATE_XML = "codesmell/back2future/xml/annotate/annotate.beans.xml";
-    private static final String SCAN_XML = "codesmell/back2future/xml/annotate/scan.beans.xml";
 
     public static void main(String[] args) {
         // application context for XML
-        //ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext(ANNOTATE_XML);
-        ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext(SCAN_XML);
+        ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext(ANNOTATE_XML);
 
         // ask container for the Bean that is ready to use
-        Car car = appContext.getBean("dmc12", Car.class);
+        Car car = appContext.getBean("dmc12autowire", Car.class);
         car.go();
 
         System.out.println(car.getClass().getName());
