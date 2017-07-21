@@ -17,6 +17,7 @@ public class ScopeDelorean implements Car {
 
     @Override
     public void go() {
+        // checking on the engine instance
         System.out.println("I have an Engine:" + engine.toString());
         engine.accelerate();
     }

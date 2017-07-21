@@ -28,7 +28,8 @@ public class ScopeConfig {
     }
 
     @Bean(name="engine")
-    @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
+//    @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
+    @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
     public Engine buildEngine() {
         return new LegendTwinTurbo();
     }
