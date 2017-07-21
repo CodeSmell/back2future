@@ -1,10 +1,12 @@
 package codesmell.back2future.bean.engine;
 
+import codesmell.back2future.bean.car.BackToFuture;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
+@BackToFuture
 @Component(value="prv")
 @Primary
 public class PeugeotRenaultVolvo implements Engine {
